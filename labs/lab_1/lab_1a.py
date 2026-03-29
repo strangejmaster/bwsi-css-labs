@@ -7,7 +7,7 @@ with your name. Then, save the code, add it to the staging area, and commit it t
 # Oh my, an edit from a remote machine!
 def main():
     print("Hello World!")
-    print("Hello person -World")
+    print("Hello person +World")
 
     name = "John" # TODO: Insert your name between the double quotes
 
