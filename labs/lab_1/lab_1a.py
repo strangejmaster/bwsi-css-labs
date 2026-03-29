@@ -4,9 +4,10 @@ lab_1a.py
 The first lab in the BWSI CSS course. To complete this lab, fill out the variable on line 10
 with your name. Then, save the code, add it to the staging area, and commit it to the Git tree.
 """
-
+# Oh my, an edit from a remote machine!
 def main():
     print("Hello World!")
+    print("Hello person -World")
 
     name = "John" # TODO: Insert your name between the double quotes
 
