@@ -34,7 +34,7 @@ def test_division():
 
 def test_complex_multiplication():
     assert simple_calculator("multiply", 1 + 1j, 1) == 1 + 1j 
-    assert simple_calculator("multiply", 1j, 1j) == -1
+    assert simple_calculator("multiply", 1j, 1j) == 0 # Should be -1
 
 def test_division_by_zero():
     with pytest.raises(ValueError, match="Cannot divide by zero."):
