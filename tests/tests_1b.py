@@ -26,6 +26,15 @@ def test_division():
     assert simple_calculator("divide", 6, 3) == 2       # Test for positive numbers
     assert simple_calculator("divide", -4, 2) == -2     # Test for negative and positive number
     assert simple_calculator("divide", 5, 2) == 2.5     # Test for division resulting in float
+    assert simple_calculator("divide", 0, 10) == 0
+
+# def test_invalid_numbers():
+#     with pytest.raises(ValueError):
+#         simple_calculator("add", 1, "a")
+
+def test_complex_multiplication():
+    assert simple_calculator("multiply", 1 + 1j, 1) == 1 + 1j 
+    assert simple_calculator("multiply", 1j, 1j) == -1
 
 def test_division_by_zero():
     with pytest.raises(ValueError, match="Cannot divide by zero."):
@@ -36,6 +45,7 @@ def test_invalid_operation():
         simple_calculator("modulus", 5, 3)              # Test for invalid operation
     with pytest.raises(ValueError, match="Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'."):
         simple_calculator("", 5, 3)                     # Test for empty operation
+
 
 if __name__ == "__main__":
     pytest.main()
